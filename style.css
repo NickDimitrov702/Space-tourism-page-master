@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+/* Please find out why you have applied this command */
+* {
+    margin:0px;
+    padding:0px;
+    
+}
+
+#root {
+    background-image: url('./assets//home/background-home-desktop.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    /* width: 100%; */
+    
+}
+
+/* html {
+    
+    max-width: 1440px;
+    height: 900px;
+} */
+
+
+.logo {
+    padding-left: 64px;
+    padding-right: 64px;
+    width: 48;
+    height: 48;
+}
+
+body {
+    overflow: hidden;
+    margin: auto;
+}
+
+
+#header-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 44px 0px 0px 0px;
+    margin-bottom: 200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#line-effect {
+    min-width:473px;
+    height: 1px;
+    opacity: 0.25;
+    background: #FFFFFF;
+    margin-right: -35px;
+    -webkit-transform: translateX(7%);
+    transform: translateX(7%);
+    z-index: 33333;
+}
+
+#nav-bar-wrapper {
+    font-family: 'Barlow Condensed', sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-height: 96px;
+    background: rgba(255, 255, 255, 0.034); 
+    backdrop-filter: blur(81.5485px);    
+    /* backdrop-filter allows: blur effect or color shifting to the are behind an element, */  
+    /*have the make the background of the element partially transperant */ 
+    border-bottom: 3px solid transparent;
+}
+
+#nav-bar-links {
+    margin-left: 183px;
+    margin-right: 165px;
+    margin-top: 39px;
+    margin-bottom: 38px;
+    align-items: center;
+    display: flex;
+    /* max-width: 542px; */
+    height: 19px;
+    
+    
+}
+
+#nav-bar-links li {
+    max-width: 126px;
+    display: flex;
+    padding-right: -14px;
+    list-style-type: none;
+    margin-right: 58px;
+    line-height: 19.2px;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    height: 19px;
+    
+    
+}
+
+#nav-bar-links li:hover {
+    border-bottom: 3px solid honeydew;
+}
+
+#nav-bar-links span {
+    width: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    color: honeydew;
+    padding-right: 5px;
+}
+
+#nav-bar-links li a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    text-decoration: none;
+    color: honeydew;
+    
+}
+
+#home-page-info-wrapper { 
+    width: 100%;
+    max-height: 900px;
+    color: #D0D6F9;
+    display: flex;
+    
+}
+
+
+
+#home-page-info-content-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 165px;
+}
+
+#home-page-info-content {
+    max-width: 450px;
+    max-height: 382px;
+    margin-left: 32.5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#home-page-info-content h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+    text-transform: uppercase;
+    letter-spacing: 4.725px;
+}
+
+#home-page-info-content h1 {
+    font-family: 'Bellefair';
+    font-weight: 400;
+    font-size: 150px;
+    text-transform: uppercase;
+}
+
+#home-page-info-content p {
+    font-family: 'Barlow';
+    font-weight: 400;
+    max-width: 444px;
+    max-height: 128px;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+
+#btn-wrapper  {
+    display: flex;
+    border-radius: 50%;
+    max-width: 274px;
+    max-height: 274px;
+    padding-left: 386px;
+}
+
+#btn {
+    border-radius: 50%;
+    width: 274px;
+    height: 274px;
+}
