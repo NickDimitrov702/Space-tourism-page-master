@@ -38,20 +38,38 @@ router(location.pathname)
 console.log(location.pathname)
 
 function navigationHandler(e) {
-    e.preventDefault()
+    // e.preventDefault()
     if(e.target.tagName == 'A') {
         e.preventDefault()
         console.log(e.target.href)
 
+        // if(e.target.href === 'destionationMars') {
+           
+        // }
         
     }
+
+
 
     let url = new URL(e.target.href);
     history.pushState(null,null, url)
     console.log(location + `${url.pathname}`)
 
+    if(url.pathname === '/destionationMars'){
+
+        // let destinationBackground = './assets/destination/background-destination-desktop.jpg';
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+    }
+
+    if(url.pathname === '/') {
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+    }
+
+
    router(url.pathname)
-   
+    
 }
 
 

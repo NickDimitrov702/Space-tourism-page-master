@@ -1,10 +1,12 @@
 .destination-style {
     display: flex;
     flex-direction: row;
-    /* width: 1000px; */
-    max-height: 500px;
+    width: auto;
+    height: auto;
     padding-bottom: 300px;
     max-width: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .destination-header-plannetImg-wrapper {
@@ -24,5 +26,55 @@
     width: 445px;
     height: 445px;
     margin-left: 166.5px;
+}
+
+.planets-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 445px;
+    height: 472px;
+}
+
+.planets-navigation {
+    display: flex;
+    flex-basis: 50px;
+    width: 285.5px;
+    font-family: Barlow Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+
+ 
+
+}
+
+.planets-navigation-list-items {
+    padding: 15px 15px 15px 0px;
+    
+    list-style: none;
+}
+
+.planets-navigation-list-items a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #D0D6F9;
+
+}
+
+
+.plannet-heading {
+    font-family: Bellefair;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 115px;
+    text-transform: uppercase;
+/* identical to box height */
+
+
+color: #FFFFFF;
 }
 
