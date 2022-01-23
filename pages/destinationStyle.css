@@ -1,0 +1,28 @@
+.destination-style {
+    display: flex;
+    flex-direction: row;
+    /* width: 1000px; */
+    max-height: 500px;
+    padding-bottom: 300px;
+    max-width: 1400px;
+}
+
+.destination-header-plannetImg-wrapper {
+    display: flex;
+    flex-direction: column;
+   margin-right: 300px;
+}
+
+.pick-destination {
+    width: 382px;
+    height: 34px;
+    padding-left: 200px;
+    /* margin-top: 212px;     */
+}
+
+.planets-img {
+    width: 445px;
+    height: 445px;
+    margin-left: 166.5px;
+}
+

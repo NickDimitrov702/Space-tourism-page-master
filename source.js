@@ -22,6 +22,9 @@ const routes = [
     }
 ]
 
+// I'm using lit-html to render the componenets.
+// Simple router having array with routes that includes objects with rout path and the path's template to be rendered
+// router functions as a manager of routs, we add a navigationHandler functions so onClick we could navigate to the links withing the NavBar
 const router = (path) => {
     
     let rout = routes.find(x => x.path == path) || routes.find(x => x.path == '/not-found')
@@ -39,51 +42,24 @@ function navigationHandler(e) {
     if(e.target.tagName == 'A') {
         e.preventDefault()
         console.log(e.target.href)
+
+        
     }
 
     let url = new URL(e.target.href);
+    history.pushState(null,null, url)
     console.log(location + `${url.pathname}`)
-    
 
    router(url.pathname)
-
+   
 }
 
 
 
-// console.log(planetsList[0].children)
-
-// fetchData()
-
-
-// function fetchData(e) {
-
-//     fetch('data.json')
-//         .then(response => response.json())
-//         .then((data) => {
-
-//             data.destinations.forEach(destination => {
-//                 let name = destination.name
-
-//                 if(destination.name === 'Moon') {
-//                     moon.innerHTML = destination.name
-//                 } else if(destination.name === 'Mars') {
-//                     mars.innerHTML = destination.name
-//                 } else if(destination.name === 'Europa') {
-//                     eurpa.innerHTML = destination.name
-//                 } else if (destination.name = 'Titan') {
-//                     titan.innerHTML = destination.name
-//                 }
-
-
-
-//                 console.log(destination)
-//                 console.log(name)
-
-//             })
-
-
-//         })
-
-
+// const navigatTo = url => {
+//     url = location.pathname
+//     window.history.pushState(null, null, url)
+//     router()
 // }
+
+// navigatTo()
