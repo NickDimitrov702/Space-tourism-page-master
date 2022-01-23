@@ -73,8 +73,16 @@
     line-height: 115px;
     text-transform: uppercase;
 /* identical to box height */
-
-
-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
+.planet-description {
+    height: 128px;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    /* or 178% */
+    color: #D0D6F9;
+}
