@@ -21,15 +21,11 @@
     align-items: center;
     height: 100vh;
     margin: auto;
-    /* width: 100%; */
+    min-width: 100%;
     
 }
 
-/* html {
-    
-    max-width: 1440px;
-    height: 900px;
-} */
+
 
 
 .logo {
@@ -132,10 +128,11 @@ body {
 }
 
 #home-page-info-wrapper { 
-    width: 100%;
+    width: 1400px;
     max-height: 900px;
     color: #D0D6F9;
     display: flex;
+    margin-top: 100px;
     
 }
 
@@ -144,7 +141,7 @@ body {
 #home-page-info-content-wrapper {
     display: flex;
     align-items: center;
-    margin-left: 165px;
+    margin-left: 105px;
 }
 
 #home-page-info-content {
@@ -188,7 +185,7 @@ body {
     border-radius: 50%;
     max-width: 274px;
     max-height: 274px;
-    padding-left: 386px;
+    padding-left: 428px;
 }
 
 #btn {

@@ -115,7 +115,7 @@
 .footer-wrapper{
     display: flex;
     flex-direction: row;
-    margin-top: 23px
+    margin-top: 23px;
 }
 
 .distace-wrapper {
@@ -139,14 +139,18 @@
     letter-spacing: 2.3625px;
     text-transform: uppercase;
     color: #D0D6F9;
+    
+    margin-right: 68px;
 }
 
 .distance-items-result {
-    font-family: 'Barlow Condensed';
+    font-family: 'Bellefair';
     font-size: 28px;
     line-height: 32px;
     text-transform: uppercase;
     color: #FFFFFF;
+    width: 153px;
+    height: 32px;
 }
 
 
@@ -160,4 +164,9 @@
     height: 1px;
     background: #383B4B;
     margin-top: 54px;
+}
+
+.distance-items {
+    font-family: 'Bellefair';
+    
 }
