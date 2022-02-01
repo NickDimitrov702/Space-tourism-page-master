@@ -1,4 +1,7 @@
 /* Need to refer to Figma document to style the destination page. */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
 .destination-style {
     display: flex;
@@ -14,20 +17,37 @@
 .destination-header-plannetImg-wrapper {
     display: flex;
     flex-direction: column;
-   margin-right: 300px;
+    margin-right: 238px;
 }
 
 .pick-destination {
-    width: 382px;
+    font-family: 'Barlow Condensed';
+    position: relative;
+    bottom: 60px;
+    right: 90px;
+    width: 400px;
     height: 34px;
     padding-left: 200px;
-    /* margin-top: 212px;     */
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+    margin-bottom:704px;
+    color: #FFFFFF;
+    
+}
+
+.span-item {
+    opacity: 0.4;
+    font-weight: bold;
 }
 
 .planets-img {
-    width: 445px;
-    height: 445px;
-    margin-left: 166.5px;
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    margin-left: 156.5px;
+    top: 270px;
 }
 
 .planets-wrapper {
@@ -36,6 +56,7 @@
     align-items: flex-start;
     width: 445px;
     height: 472px;
+    margin-right: 130px;
 }
 
 .planets-navigation {
@@ -48,6 +69,7 @@
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.7px;
+    margin-bottom: 37px
 
  
 
@@ -55,7 +77,6 @@
 
 .planets-navigation-list-items {
     padding: 15px 15px 15px 0px;
-    
     list-style: none;
 }
 
@@ -68,7 +89,7 @@
 
 
 .plannet-heading {
-    font-family: Bellefair;
+    font-family: 'Bellefair';
     font-style: normal;
     font-weight: normal;
     font-size: 100px;
@@ -76,11 +97,12 @@
     text-transform: uppercase;
 /* identical to box height */
     color: #FFFFFF;
+    margin-bottom: 14px;
 }
 
 .planet-description {
     height: 128px;
-    font-family: Barlow;
+    font-family: 'Barlow';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -88,3 +110,41 @@
     /* or 178% */
     color: #D0D6F9;
 }
+
+.footer-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 83px
+}
+
+.distace-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 143.5px;
+    height: 61px;
+    margin-right: 79px;
+}
+
+.travle-time-wrapper {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.distance-items {
+    font-family: 'Barlow Condensed';
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    text-transform: uppercase;
+    color: #D0D6F9;
+}
+
+.distance-items-result {
+    font-family: 'Barlow Condensed';
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+

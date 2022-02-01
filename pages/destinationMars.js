@@ -7,11 +7,11 @@ export default () =>
   <!-- <link rel="stylesheet" type="text/css" href="./destinationStyle.css"> -->
   <div class="destination-style" href='/destionationMars'>
     <section class="destination-header-plannetImg-wrapper">
-      <h1 class="pick-destination">01 Pick your destination</h1>
+      <span class="pick-destination"><span class="span-item">01</span> Pick your destination</span>
       <img class="planets-img" src='../assets/destination/image-mars.png'>
     </section>
   
-  
+
     <div class="planets-wrapper">
       <ul class="planets-navigation">
         <li class="planets-navigation-list-items"><a href="/moon"> Moon</a></li>
@@ -25,14 +25,17 @@ export default () =>
         the tallest planetary mountain in our solar system. It’s two and a half times
         the size of Everest!
       </p>
-      <div class="distace-wrapper">
-        Avg. distance
-        225 mil. km
-      </div>
-      <div class="travle-time-wrapper">
-        Est. travel time
-        9 months
-      </div>
+      <footer class="footer-wrapper">
+        <div class="distace-wrapper">
+          <span class="distance-items">distance</span>
+          <span class="distance-items-result">225 mil. km</span>
+        </div>
+        <div class="travle-time-wrapper">
+          <span class="distance-items">Est. travel time</span>
+          <span class="distance-items-result">9 months</span>
+        </div>
+      </footer>
+  
     </div>
   </div>
   
