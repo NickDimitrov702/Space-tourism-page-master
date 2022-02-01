@@ -25,6 +25,9 @@ export default () =>
         the tallest planetary mountain in our solar system. It’s two and a half times
         the size of Everest!
       </p>
+
+      <div id="line-effect-destination">
+
       <footer class="footer-wrapper">
         <div class="distace-wrapper">
           <span class="distance-items">distance</span>

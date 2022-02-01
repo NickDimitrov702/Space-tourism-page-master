@@ -195,4 +195,11 @@ body {
     border-radius: 50%;
     width: 274px;
     height: 274px;
+    font-family: Bellefair;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 2px;
+    color: #0B0D17;
 }

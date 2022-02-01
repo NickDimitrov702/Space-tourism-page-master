@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     margin-right: 238px;
+
 }
 
 .pick-destination {
@@ -114,7 +115,7 @@
 .footer-wrapper{
     display: flex;
     flex-direction: row;
-    margin-top: 83px
+    margin-top: 23px
 }
 
 .distace-wrapper {
@@ -148,3 +149,15 @@
     color: #FFFFFF;
 }
 
+
+#line-effect-destination {
+    /* position: absolute; */
+    left: 0.22%;
+    right: 0%;
+    top: 80.93%;
+    bottom: 18.86%;
+    width: 444px;
+    height: 1px;
+    background: #383B4B;
+    margin-top: 54px;
+}
