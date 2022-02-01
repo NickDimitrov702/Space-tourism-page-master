@@ -1,0 +1,120 @@
+.crew-page-wrapper {
+    width: 1400px;
+    display: flex;
+    flex-direction: row;
+
+   
+}
+
+.meet-your-crew-heading {
+    margin-bottom: -100px;
+    font-family: Barlow Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.meet-your-crew-heading span {
+    opacity: 0.25;;
+}
+
+.crew-information-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 150.23px;
+}
+
+.crew-job-title {
+    margin-top: 154px;
+    font-family: Bellefair;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.crew-name {
+    margin-top: 15px;
+    width: 488px;
+    height: 64px;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 64px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
+
+.crew-description {
+
+    margin-top: 27px;
+    width: 444px;
+    height: 128px;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    /* or 178% */
+
+
+    color: #D0D6F9;
+    
+}
+
+.meet-your-crew-heading {
+    font-family: Barlow Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+   
+}
+
+.crew-navigation-wrapper {
+    display: flex;
+
+}
+
+.crew-navigation-link-items {
+    margin-top: 80px;
+    width: 15px;
+    height: 15px;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.17;
+    border-radius: 50%;
+    margin-right: 28px;
+}
+
+.crew-navigation-link-items:hover {
+    cursor:pointer;
+    background: #FFFFFF;
+    opacity: 1;
+}
+
+
+.crew-img {
+    width: 568px;
+    height: 712px;
+    margin-left: 125.93px;
+}

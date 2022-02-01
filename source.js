@@ -13,6 +13,7 @@ let planetsList = document.querySelectorAll('#planets-list')
 import home from './pages/home.js'
 import layout from './pages/layout.js'
 import destionationMars from './pages/destinationMars.js'
+import crew from './pages/crew-pilot.js'
 
 const routes = [
     {
@@ -23,6 +24,11 @@ const routes = [
     {
         path: '/destionationMars',
         tempalte: destionationMars,
+    },
+
+    {
+        path: '/crew',
+        tempalte: crew,
     }
 ]
 
@@ -44,6 +50,11 @@ const router = (path) => {
     } if(url.pathname === '/') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+    }
+
+    if(url.pathname === '/crew') {
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
     }
     // You can delete below console.log
     console.log('http://localhost:3000'+`${path}`)
@@ -68,7 +79,7 @@ function navigationHandler(e) {
     let url = new URL(e.target.href);
     // let background = document.getElementById('root')
     // background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
-    // history.pushState(null,null, url)
+    history.pushState(null,null, url)
     // console.log(location.pathname)
 
     if (url.pathname === '/destionationMars') {
@@ -77,6 +88,16 @@ function navigationHandler(e) {
         history.pushState(null, null, url)
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+        router(url.pathname)
+
+    }
+
+    if (url.pathname === '/crew') {
+        let url = new URL(e.target.href);
+        console.log(url)
+        history.pushState(null, null, url)
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
         router(url.pathname)
 
     }
@@ -90,7 +111,7 @@ function navigationHandler(e) {
     }
 
 
-    // router(url.pathname)
+    router(url.pathname)
 
 }
 
