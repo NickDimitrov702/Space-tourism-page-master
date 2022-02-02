@@ -28,7 +28,7 @@ export default ({
                     </li>
                     <li class="link-items">
                         <span class="number">01</span>
-                        <a href="/destionationMars">Destination</a>
+                        <a href="/destinationRoot">Destination</a>
                     </li>
                     <li class="link-items">
                         <span class="number">02</span>

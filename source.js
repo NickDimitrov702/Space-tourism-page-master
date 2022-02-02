@@ -12,7 +12,7 @@ let planetsList = document.querySelectorAll('#planets-list')
 
 import home from './pages/home.js'
 import layout from './pages/layout.js'
-import destionationMars from './pages/destinationMars.js'
+import destionationRoot from './pages/destinationRoot.js'
 import crew from './pages/crew-pilot.js'
 
 const routes = [
@@ -22,8 +22,8 @@ const routes = [
     },
 
     {
-        path: '/destionationMars',
-        tempalte: destionationMars,
+        path: '/destinationRoot',
+        tempalte: destionationRoot,
     },
 
     {
@@ -42,12 +42,13 @@ const router = (path) => {
     // Checking isnide the router pathname if it is the same as the page we are on so we can keep the background 
     // for the relevant page the same on refresh.
 
-    if(url.pathname === '/destionationMars'){
-        let background = document.getElementById('root')
-        // setTimeout(background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)', 2000)
-        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+    // if(url.pathname === '/destionationMars'){
+    //     let background = document.getElementById('root')
+    //     // setTimeout(background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)', 2000)
+    //     background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
 
-    } if(url.pathname === '/') {
+    // } 
+    if(url.pathname === '/') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
     }
@@ -82,15 +83,15 @@ function navigationHandler(e) {
     history.pushState(null,null, url)
     // console.log(location.pathname)
 
-    if (url.pathname === '/destionationMars') {
-        let url = new URL(e.target.href);
-        console.log(url)
-        history.pushState(null, null, url)
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
-        router(url.pathname)
+    // if (url.pathname === '/destionationMars') {
+    //     let url = new URL(e.target.href);
+    //     console.log(url)
+    //     history.pushState(null, null, url)
+    //     let background = document.getElementById('root')
+    //     background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+    //     router(url.pathname)
 
-    }
+    // }
 
     if (url.pathname === '/crew') {
         let url = new URL(e.target.href);

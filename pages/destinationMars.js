@@ -5,7 +5,7 @@ import { html } from '../node_modules/lit-html/lit-html.js'
 export default () =>
   html`
   <!-- <link rel="stylesheet" type="text/css" href="./destinationStyle.css"> -->
-  <div class="destination-style" href='/destionationMars'>
+  <!-- <div class="destination-style" href='/destionationMars'> -->
     <section class="destination-header-plannetImg-wrapper">
       <span class="pick-destination"><span class="span-item">01</span> Pick your destination</span>
       <img class="planets-img" src='../assets/destination/image-mars.png'>
