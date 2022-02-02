@@ -14,7 +14,8 @@ import home from './pages/home.js'
 import layout from './pages/layout.js'
 import destionationRoot from './pages/destinationRoot.js'
 import crew from './pages/crew-pilot.js'
-
+import moon from './pages/destinationMoon.js'
+import mars from './pages/destinationMars.js'
 const routes = [
     {
         path: '/',
@@ -27,9 +28,20 @@ const routes = [
     },
 
     {
+        path: '/moon',
+        tempalte: moon,
+    },
+
+    {
         path: '/crew',
         tempalte: crew,
-    }
+    },
+
+
+    {
+        path: '/mars',
+        tempalte: mars,
+    },
 ]
 
 // I'm using lit-html to render the componenets.
@@ -37,28 +49,41 @@ const routes = [
 // router functions as a manager of routs, we add a navigationHandler functions so onClick we could navigate to the links withing the NavBar
 const router = (path) => {
     // Last time I forgot to compare x.path with path, instead I was comparing path === path :(
-    let url = new URL('http://localhost:3000'+`${path}`);
+    let url = new URL('http://localhost:3000' + `${path}`);
     // history.pushState(null, null, url)
     // Checking isnide the router pathname if it is the same as the page we are on so we can keep the background 
     // for the relevant page the same on refresh.
 
-    // if(url.pathname === '/destionationMars'){
-    //     let background = document.getElementById('root')
-    //     // setTimeout(background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)', 2000)
-    //     background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+    if (url.pathname === '/destinationRoot') {
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
 
-    // } 
-    if(url.pathname === '/') {
+    }
+
+    if(url.pathname === '/moon') {
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+    }
+
+    
+    if(url.pathname === '/mars') {
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+    }
+
+    if (url.pathname === '/') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
     }
 
-    if(url.pathname === '/crew') {
+    if (url.pathname === '/crew') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
     }
+
+    
     // You can delete below console.log
-    console.log('http://localhost:3000'+`${path}`)
+    console.log('http://localhost:3000' + `${path}`)
     let rout = routes.find(x => x.path == path) || routes.find(x => x.path == '/not-found')
     render(layout(rout.tempalte, { navigationHandler }), document.getElementById('app'))
 
@@ -68,7 +93,7 @@ router(location.pathname)
 // console.log(location.pathname)
 
 function navigationHandler(e) {
-    // e.preventDefault()
+    e.preventDefault()
     if (e.target.tagName == 'A') {
         e.preventDefault()
         console.log(e.target.href)
@@ -78,20 +103,20 @@ function navigationHandler(e) {
 
 
     let url = new URL(e.target.href);
-    // let background = document.getElementById('root')
-    // background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
-    history.pushState(null,null, url)
+    let background = document.getElementById('root')
+    background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+    history.pushState(null, null, url)
     // console.log(location.pathname)
 
-    // if (url.pathname === '/destionationMars') {
-    //     let url = new URL(e.target.href);
-    //     console.log(url)
-    //     history.pushState(null, null, url)
-    //     let background = document.getElementById('root')
-    //     background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
-    //     router(url.pathname)
+    if (url.pathname === '/destinationRoot') {
+        let url = new URL(e.target.href);
+        console.log(url)
+        history.pushState(null, null, url)
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+        router(url.pathname)
 
-    // }
+    }
 
     if (url.pathname === '/crew') {
         let url = new URL(e.target.href);
@@ -112,8 +137,27 @@ function navigationHandler(e) {
     }
 
 
-    router(url.pathname)
+    if (url.pathname === '/moon') {
+        let url = new URL(e.target.href);
+        history.pushState(null, null, url)
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+        router(url.pathname)
+    }
+
+    if (url.pathname === '/mars') {
+        let url = new URL(e.target.href);
+        history.pushState(null, null, url)
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+        router(url.pathname)
+    }
+
+
+    // router(url.pathname)
 
 }
+
+
 
 

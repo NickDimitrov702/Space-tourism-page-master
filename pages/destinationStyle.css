@@ -121,9 +121,9 @@
 .distace-wrapper {
     display: flex;
     flex-direction: column;
-    width: 143.5px;
+    width: 153.5px;
     height: 61px;
-    margin-right: 79px;
+    margin-right: 68px;
 }
 
 .travle-time-wrapper {
@@ -140,7 +140,7 @@
     text-transform: uppercase;
     color: #D0D6F9;
     
-    margin-right: 68px;
+    /* margin-right: 70px; */
 }
 
 .distance-items-result {
