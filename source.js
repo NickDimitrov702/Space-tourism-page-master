@@ -19,14 +19,18 @@ let planetsList = document.querySelectorAll('#planets-list')
 import home from './pages/home.js'
 import layout from './pages/layout.js'
 import destionationRoot from './pages/destinationRoot.js'
+
 import crewRoot from './pages/crewRoot.js'
+
 import moon from './pages/destinationMoon.js'
 import mars from './pages/destinationMars.js'
 import europa from './pages/destinationEuropa.js'
 import titan from './pages/destinationTitan.js'
+
 import crewEngineer from './pages/crewEngineer.js'
 import crewSpecialist from './pages/crewSpecialist.js'
 import crewPilot from './pages/crewPilot.js'
+
 import technologyRoot from './pages/technologyRoot.js'
 import technologySpaceport from './pages/technologySpaceport.js'
 import technologyCapsule from './pages/technologyCapsule.js'
@@ -86,18 +90,18 @@ const routes = [
     },
 
     {
-        path:'/technologyRoot',
-        tempalte:technologyRoot,
+        path: '/technologyRoot',
+        tempalte: technologyRoot,
     },
 
     {
-        path:'/spacePort',
-        tempalte:technologySpaceport
+        path: '/spacePort',
+        tempalte: technologySpaceport
     },
 
     {
-        path:'/technologyCapsule',
-        tempalte:technologyCapsule
+        path: '/technologyCapsule',
+        tempalte: technologyCapsule
     }
 
 
@@ -107,54 +111,50 @@ const routes = [
 // Simple router having array with routes that includes objects with rout path and the path's template to be rendered
 // router functions as a manager of routs, we add a navigationHandler functions so onClick we could navigate to the links withing the NavBar
 const router = (path) => {
-    // Last time I forgot to compare x.path with path, instead I was comparing path === path :(
-    let url = new URL('http://localhost:3000' + `${path}`);
-    // history.pushState(null, null, url)
-    // Checking isnide the router pathname if it is the same as the page we are on so we can keep the background 
-    // for the relevant page the same on refresh.
 
+    // Last time I forgot to compare x.path with path, instead I was comparing path === path :(
+        // history.pushState(null, null, url)
+        // Checking isnide the router pathname if it is the same as the page we are on so we can keep the background 
+        // for the relevant page the same on refresh.
+
+        let url = new URL('http://localhost:3000' + `${path}`);
+    if (url.pathname === '/') {
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+    }
+    
     if (url.pathname === '/destinationRoot') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
 
     }
 
-    if (url.pathname === '/moon' || url.pathname === '/europa' || url.pathname === '/titan') {
+    if (url.pathname === '/moon' || url.pathname === '/europa' || url.pathname === '/titan' || url.pathname === '/mars') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
     }
 
 
-    if (url.pathname === '/mars') {
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
-    }
-
-    if (url.pathname === '/') {
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
-    }
-
-    if (url.pathname === '/crewRoot' || url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist'  || url.pathname === '/crewPilot') {
+    if (url.pathname === '/crewRoot' || url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist' || url.pathname === '/crewPilot') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
     }
 
-    if(url.pathname === '/technologyRoot' || url.pathname === '/spacePort' || url.pathname === '/technologyCapsule') {
+    if (url.pathname === '/technologyRoot' || url.pathname === '/spacePort' || url.pathname === '/technologyCapsule') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/technology/background-technology-desktop.jpg)'
     }
 
+    let rout = routes.find(x => x.path == path) || routes.find(x => x.path == '/not-found')
+    render(layout(rout.tempalte, { navigationHandler }), document.getElementById('app'))
 
     // You can delete below console.log
     console.log('http://localhost:3000' + `${path}`)
-    let rout = routes.find(x => x.path == path) || routes.find(x => x.path == '/not-found')
-    render(layout(rout.tempalte, { navigationHandler }), document.getElementById('app'))
 
 }
 
 router(location.pathname)
-// console.log(location.pathname)
+
 
 function navigationHandler(e) {
     e.preventDefault()
@@ -164,13 +164,19 @@ function navigationHandler(e) {
 
     }
 
-
-
     let url = new URL(e.target.href);
     let background = document.getElementById('root')
     background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
     history.pushState(null, null, url)
-    console.log(url)
+
+
+    if (url.pathname === '/') {
+        let url = new URL(e.target.href);
+        history.pushState(null, null, url)
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+        router(url.pathname)
+    }
 
     if (url.pathname === '/destinationRoot') {
         let url = new URL(e.target.href);
@@ -182,17 +188,7 @@ function navigationHandler(e) {
 
     }
 
-    if (url.pathname === '/crewRoot') {
-        let url = new URL(e.target.href);
-        console.log(url)
-        history.pushState(null, null, url)
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
-        router(url.pathname)
-
-    }
-
-    if (url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist' || url.pathname === '/crewPilot') {
+    if (url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist' || url.pathname === '/crewPilot' || url.pathname === '/crewRoot') {
         let url = new URL(e.target.href);
         console.log(url)
         history.pushState(null, null, url)
@@ -201,7 +197,7 @@ function navigationHandler(e) {
         router(url.pathname)
     }
 
-    if (url.pathname === '/') {
+    if (url.pathname === '/mars' || url.pathname === '/europa' || url.pathname === '/titan' || url.pathname === '/moon') {
         let url = new URL(e.target.href);
         history.pushState(null, null, url)
         let background = document.getElementById('root')
@@ -210,33 +206,13 @@ function navigationHandler(e) {
     }
 
 
-    if (url.pathname === '/moon') {
-        let url = new URL(e.target.href);
-        history.pushState(null, null, url)
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
-        router(url.pathname)
-    }
-
-    if (url.pathname === '/mars' || url.pathname === '/europa' || url.pathname === '/titan') {
-        let url = new URL(e.target.href);
-        history.pushState(null, null, url)
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
-        router(url.pathname)
-    }
-
-
-    if(url.pathname === '/technologyRoot' || url.pathname === '/spacePort' || url.pathname === '/technologyCapsule') {
+    if (url.pathname === '/technologyRoot' || url.pathname === '/spacePort' || url.pathname === '/technologyCapsule') {
         let url = new URL(e.target.href);
         history.pushState(null, null, url)
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/technology/background-technology-desktop.jpg)'
         router(url.pathname)
     }
-
-
-    // router(url.pathname)
 
 }
 
