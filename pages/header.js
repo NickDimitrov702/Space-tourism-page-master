@@ -32,7 +32,7 @@ export default ({
                     </li>
                     <li class="link-items">
                         <span class="number">02</span>
-                        <a href="/crew">Crew</a>
+                        <a href="/crewRoot">Crew</a>
                     </li>
                     <li class="link-items">
                         <span class="number">03</span>

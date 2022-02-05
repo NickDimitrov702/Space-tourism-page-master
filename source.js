@@ -19,11 +19,14 @@ let planetsList = document.querySelectorAll('#planets-list')
 import home from './pages/home.js'
 import layout from './pages/layout.js'
 import destionationRoot from './pages/destinationRoot.js'
-import crew from './pages/crew-pilot.js'
+import crewRoot from './pages/crewRoot.js'
 import moon from './pages/destinationMoon.js'
 import mars from './pages/destinationMars.js'
 import europa from './pages/destinationEuropa.js'
 import titan from './pages/destinationTitan.js'
+import crewEngineer from './pages/crewEngineer.js'
+import crewSpecialist from './pages/crewSpecialist.js'
+import crewPilot from './pages/crewPilot.js'
 
 const routes = [
     {
@@ -42,9 +45,26 @@ const routes = [
     },
 
     {
-        path: '/crew',
-        tempalte: crew,
+        path: '/crewRoot',
+        tempalte: crewRoot,
     },
+
+    {
+        path: '/crewEngineer',
+        tempalte: crewEngineer
+    },
+
+
+    {
+        path: '/crewSpecialist',
+        tempalte: crewSpecialist
+    },
+
+    {
+        path: '/crewPilot',
+        tempalte: crewPilot,
+    },
+
 
 
     {
@@ -53,14 +73,16 @@ const routes = [
     },
 
     {
-        path:'/europa',
+        path: '/europa',
         tempalte: europa,
     },
 
     {
-        path:'/titan',
+        path: '/titan',
         tempalte: titan,
-    }
+    },
+
+
 ]
 
 // I'm using lit-html to render the componenets.
@@ -79,13 +101,13 @@ const router = (path) => {
 
     }
 
-    if(url.pathname === '/moon' || url.pathname === '/europa' || url.pathname === '/titan') {
+    if (url.pathname === '/moon' || url.pathname === '/europa' || url.pathname === '/titan') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
     }
 
-    
-    if(url.pathname === '/mars') {
+
+    if (url.pathname === '/mars') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
     }
@@ -95,12 +117,12 @@ const router = (path) => {
         background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
     }
 
-    if (url.pathname === '/crew') {
+    if (url.pathname === '/crewRoot' || url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist'  || url.pathname === '/crewPilot') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
     }
 
-    
+
     // You can delete below console.log
     console.log('http://localhost:3000' + `${path}`)
     let rout = routes.find(x => x.path == path) || routes.find(x => x.path == '/not-found')
@@ -137,7 +159,7 @@ function navigationHandler(e) {
 
     }
 
-    if (url.pathname === '/crew') {
+    if (url.pathname === '/crewRoot') {
         let url = new URL(e.target.href);
         console.log(url)
         history.pushState(null, null, url)
@@ -145,6 +167,15 @@ function navigationHandler(e) {
         background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
         router(url.pathname)
 
+    }
+
+    if (url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist' || url.pathname === '/crewPilot') {
+        let url = new URL(e.target.href);
+        console.log(url)
+        history.pushState(null, null, url)
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
+        router(url.pathname)
     }
 
     if (url.pathname === '/') {
