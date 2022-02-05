@@ -45,6 +45,8 @@
 .technology-navigation-link-items {
     display: flex;
     align-items: center;
+    padding: 33px;
+    color: wheat;
     
 }
 
@@ -62,16 +64,13 @@
     opacity: 1;
     width: 80px;
     height: 80px;
+
     
 }
 
 .link-num:hover {
     color: black;
 }
-
-
-
-
 
 
 .technology-navigation-link-items:hover {
@@ -97,7 +96,7 @@
 }
 
 .technolgy-title {
-    width: 200px;
+    width: 300px;
     height: 19px;
     font-family: Barlow Condensed;
     font-style: normal;
@@ -107,6 +106,7 @@
     letter-spacing: 2.7px;
     text-transform: uppercase;
     margin-bottom: 11px;
+    color: #D0D6F9;
 }
 
 .technology-description {

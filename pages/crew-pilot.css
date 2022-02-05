@@ -26,7 +26,8 @@
 .crew-information-wrapper {
     display: flex;
     flex-direction: column;
-    margin-left: 150.23px;
+    margin-left: 100.23px;
+    margin-top: 64px;
 }
 
 .crew-job-title {
@@ -45,8 +46,8 @@
 
 .crew-name {
     margin-top: 15px;
-    width: 488px;
-    height: 64px;
+    width: 615px;
+    height: 70px;
     font-family: 'Bellefair';
     font-style: normal;
     font-weight: normal;

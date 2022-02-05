@@ -28,6 +28,8 @@ import crewEngineer from './pages/crewEngineer.js'
 import crewSpecialist from './pages/crewSpecialist.js'
 import crewPilot from './pages/crewPilot.js'
 import technologyRoot from './pages/technologyRoot.js'
+import technologySpaceport from './pages/technologySpaceport.js'
+import technologyCapsule from './pages/technologyCapsule.js'
 
 const routes = [
     {
@@ -88,6 +90,16 @@ const routes = [
         tempalte:technologyRoot,
     },
 
+    {
+        path:'/spacePort',
+        tempalte:technologySpaceport
+    },
+
+    {
+        path:'/technologyCapsule',
+        tempalte:technologyCapsule
+    }
+
 
 ]
 
@@ -128,7 +140,7 @@ const router = (path) => {
         background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
     }
 
-    if(url.pathname === '/technologyRoot') {
+    if(url.pathname === '/technologyRoot' || url.pathname === '/spacePort' || url.pathname === '/technologyCapsule') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/technology/background-technology-desktop.jpg)'
     }
@@ -158,7 +170,7 @@ function navigationHandler(e) {
     let background = document.getElementById('root')
     background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
     history.pushState(null, null, url)
-    // console.log(location.pathname)
+    console.log(url)
 
     if (url.pathname === '/destinationRoot') {
         let url = new URL(e.target.href);
@@ -215,7 +227,7 @@ function navigationHandler(e) {
     }
 
 
-    if(url.pathname === '/technologyRoot') {
+    if(url.pathname === '/technologyRoot' || url.pathname === '/spacePort' || url.pathname === '/technologyCapsule') {
         let url = new URL(e.target.href);
         history.pushState(null, null, url)
         let background = document.getElementById('root')
