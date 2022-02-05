@@ -12,9 +12,12 @@ export default () =>
         outer space and not hover kind of on the edge of it. Well sit back, and relax
         because we’ll give you a truly out of this world experience!</p>
       </div>
-      <div id="btn-wrapper">
-        <input id="btn" type="button" value="EXPLORE">
+      <div class='bubble-wrapper'>
+        <div id="btn-wrapper">
+          <input id="btn" type="button" value="EXPLORE">
+        </div>
       </div>
+      
     </div>
   
   

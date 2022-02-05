@@ -184,11 +184,8 @@ body {
 
 
 #btn-wrapper  {
-    display: flex;
-    border-radius: 50%;
-    max-width: 274px;
-    max-height: 274px;
-    padding-left: 428px;
+    margin-left: 300px;
+    border: solid 80px transparent;
 }
 
 #btn {
@@ -202,4 +199,19 @@ body {
     line-height: 37px;
     letter-spacing: 2px;
     color: #0B0D17;
+}
+
+#btn:hover {
+    cursor: pointer;
+}
+
+#btn-wrapper:hover {
+    border-radius: 100%;
+    border:solid 80px  #ffffff2d;
+    /* transition: 0.1s; */
+    cursor: pointer;
+}
+
+.bubble-wrapper {
+    border:solid 50px transparent;
 }
