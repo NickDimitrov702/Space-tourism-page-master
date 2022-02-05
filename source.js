@@ -1,7 +1,13 @@
-// Check why it shows invalid URL some times on e.target.href - it may be the event since it is covering 2 nested elements.
-// Make router for Planets navigation, it will be some kind of a nested router.
-// Seperate the destinations components like, so you can render them with the destination router.
-// Most probably you will need a layout like the initial one that is made for the main navigation. 
+// Check why it shows invalid URL some times on e.target.href - it may be the event since it is covering 2 nested elements.(FIXED)
+// Make router for Planets navigation, it will be some kind of a nested router.(DONE, not a nested router but using the same router)
+// Seperate the destinations components like, so you can render them with the destination router.(DONE, not going to use that)
+// Continue with placing the rout paths for the other planets.
+// Create the Crew section as creating a style sheet that will apply to all the crew markups.
+// Create the technology section as the other sections. 
+// Place all the relevant components in seperate folders so it can be easy to navigate. 
+// Make the folders as fallows: Destination folder with the style.css, crew folder..., technology folder....,
+
+
 import { html, render } from './node_modules/lit-html/lit-html.js'
 
 
@@ -16,6 +22,9 @@ import destionationRoot from './pages/destinationRoot.js'
 import crew from './pages/crew-pilot.js'
 import moon from './pages/destinationMoon.js'
 import mars from './pages/destinationMars.js'
+import europa from './pages/destinationEuropa.js'
+import titan from './pages/destinationTitan.js'
+
 const routes = [
     {
         path: '/',
@@ -42,6 +51,16 @@ const routes = [
         path: '/mars',
         tempalte: mars,
     },
+
+    {
+        path:'/europa',
+        tempalte: europa,
+    },
+
+    {
+        path:'/titan',
+        tempalte: titan,
+    }
 ]
 
 // I'm using lit-html to render the componenets.
@@ -60,7 +79,7 @@ const router = (path) => {
 
     }
 
-    if(url.pathname === '/moon') {
+    if(url.pathname === '/moon' || url.pathname === '/europa' || url.pathname === '/titan') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
     }
@@ -145,7 +164,7 @@ function navigationHandler(e) {
         router(url.pathname)
     }
 
-    if (url.pathname === '/mars') {
+    if (url.pathname === '/mars' || url.pathname === '/europa' || url.pathname === '/titan') {
         let url = new URL(e.target.href);
         history.pushState(null, null, url)
         let background = document.getElementById('root')
