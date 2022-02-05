@@ -36,7 +36,7 @@ export default ({
                     </li>
                     <li class="link-items">
                         <span class="number">03</span>
-                        <a href="">Technology</a>
+                        <a href="/technologyRoot">Technology</a>
                     </li>
                 </ul>
             </nav>

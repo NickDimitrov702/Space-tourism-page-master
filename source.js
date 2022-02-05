@@ -27,6 +27,7 @@ import titan from './pages/destinationTitan.js'
 import crewEngineer from './pages/crewEngineer.js'
 import crewSpecialist from './pages/crewSpecialist.js'
 import crewPilot from './pages/crewPilot.js'
+import technologyRoot from './pages/technologyRoot.js'
 
 const routes = [
     {
@@ -82,6 +83,11 @@ const routes = [
         tempalte: titan,
     },
 
+    {
+        path:'/technologyRoot',
+        tempalte:technologyRoot,
+    },
+
 
 ]
 
@@ -120,6 +126,11 @@ const router = (path) => {
     if (url.pathname === '/crewRoot' || url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist'  || url.pathname === '/crewPilot') {
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
+    }
+
+    if(url.pathname === '/technologyRoot') {
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/technology/background-technology-desktop.jpg)'
     }
 
 
@@ -200,6 +211,15 @@ function navigationHandler(e) {
         history.pushState(null, null, url)
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+        router(url.pathname)
+    }
+
+
+    if(url.pathname === '/technologyRoot') {
+        let url = new URL(e.target.href);
+        history.pushState(null, null, url)
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/technology/background-technology-desktop.jpg)'
         router(url.pathname)
     }
 
