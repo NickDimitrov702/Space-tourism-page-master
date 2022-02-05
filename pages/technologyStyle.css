@@ -26,7 +26,7 @@
     border-radius: 100%;
     background-color: transparent;
     text-align: center;
-    font-family: Bellefair;
+    font-family: 'Bellefair';
     font-style: normal;
     font-weight: normal;
     font-size: 32px;
@@ -37,8 +37,7 @@
     text-align: center;
     letter-spacing: 2px;
     mix-blend-mode: normal;
-    opacity: 0.5;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff59;
     box-sizing: border-box;
 }
 
@@ -49,20 +48,35 @@
     
 }
 
-.technology-navigation-link-items a {
+.link-num {
+    position: absolute;
     text-align: center;
     text-decoration: none;
-    margin: 22px 34.5px 21px 35px;
+    padding: 40px 0px 0px 0px;
     font-family: Bellefair;
     font-style: normal;
     font-weight: normal;
     font-size: 32px;
     line-height: 37px;
     color: #FFFFFF;
+    opacity: 1;
+    width: 80px;
+    height: 80px;
+    
 }
 
-.technology-navigation-link-items a:hover {
+.link-num:hover {
+    color: black;
+}
 
+
+
+
+
+
+.technology-navigation-link-items:hover {
+    background: #FFFFFF;
+    color: black;
 }
 
 .technology-navigation-link-items:nth-child(1),

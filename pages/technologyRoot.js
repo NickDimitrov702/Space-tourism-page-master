@@ -19,15 +19,10 @@ export default ({ navigationHandler }) =>
             </div>
             
                 <div class="technology-navigation-wrapper" @click=${navigationHandler}>
-                    <div class='technology-navigation-link-items'>
-                            <a href="/launchVehicle">1</a>
-                    </div>
-                    <div class='technology-navigation-link-items'>
-                            <a href="/launchVehicle">2</a>
-                    </div>
-                    <div class='technology-navigation-link-items'>
-                            <a href="/launchVehicle">3</a>
-                    </div>
+                    
+                            <a class='technology-navigation-link-items' href="/launchVehicle"><div class='link-num'>1</div></a>
+                            <a class='technology-navigation-link-items' href="/launchVehicle"><div class='link-num'>2</div></a>
+                            <a class='technology-navigation-link-items' href="/launchVehicle"><div class='link-num'>3</div></a>
                 </div>
            
         </div>
