@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "lit-html": "^2.0.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickDimitrov702/Space-tourism-page-master.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NickDimitrov702/Space-tourism-page-master/issues"
+  },
+  "homepage": "https://github.com/NickDimitrov702/Space-tourism-page-master#readme"
 }
