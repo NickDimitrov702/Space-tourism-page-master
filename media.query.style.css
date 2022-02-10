@@ -1,0 +1,102 @@
+@media all and (width: 768px) {
+
+    #root {
+        background-image: url('./assets//home/background-home-tablet.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+        display: flex;
+        max-width: 768px;
+        min-height: 1024px;
+        margin: auto;
+    }
+
+    .logo {
+        padding: 0px;
+        margin-right: 230px;
+    }
+
+    .number {
+        display: none;
+    }
+
+
+    #header-wrapper {
+        display: flex;
+        min-width: 729px;
+        margin-left: 39px;
+    }
+
+    #nav-bar-wrapper {
+        display: flex;
+        max-width: 450px;
+        height: 96px;
+        align-items: center;
+      
+    }
+
+    #nav-bar-links {
+        max-width: 356px;
+        height: 18px;
+        margin-left: 38px;
+        
+    }
+
+    #nav-bar-links li {
+        max-width: 150px;
+        font-family: 'Barlow' Condensed;
+        margin-right: 42px;
+        margin-left: 0px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        margin-left: 10px;
+        letter-spacing: 2.3625px;
+        color: #FFFFFF;
+    }
+
+
+    #line-effect {
+        display: none;
+    }
+
+    #nav-bar-links li:nth-child(1) {
+        margin-right: 37px;
+    }
+    #nav-bar-links li:nth-child(2) {
+        margin-right: 40px;
+    }
+    #nav-bar-links li:nth-child(3) {
+        margin-right: 37px;
+    }
+
+    #app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        max-width: 768px;
+   
+    }
+
+
+    #home-page-info-wrapper {
+        display:flex;
+        max-width: 768px;
+        align-items: center;
+    }
+
+    #home-page-info-content {
+        display:flex;
+        max-width: 768px;
+        align-items: center;
+    }
+
+    #home-page-info-content-wrapper {
+        display: flex;
+        max-width: 768px;
+        flex-direction: column;
+        align-items: center;
+    }
+}

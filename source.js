@@ -111,7 +111,7 @@ const routes = [
 // Simple router having array with routes that includes objects with rout path and the path's template to be rendered
 // router functions as a manager of routs, we add a navigationHandler functions so onClick we could navigate to the links withing the NavBar
 const router = (path) => {
-
+    let intViewportWidth = window.innerWidth;
     // Last time I forgot to compare x.path with path, instead I was comparing path === path :(
         // history.pushState(null, null, url)
         // Checking isnide the router pathname if it is the same as the page we are on so we can keep the background 
@@ -170,11 +170,19 @@ function navigationHandler(e) {
     history.pushState(null, null, url)
 
 
-    if (url.pathname === '/') {
+    if (url.pathname === '/' && intViewportWidth >= '768') {
         let url = new URL(e.target.href);
         history.pushState(null, null, url)
         let background = document.getElementById('root')
         background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+        router(url.pathname)
+    }
+
+    if(intViewportWidth <= '768'){
+        let url = new URL(e.target.href);
+        history.pushState(null, null, url)
+        let background = document.getElementById('root')
+        background.style.backgroundImage = 'url(./assets/home/background-home-tablet.jpg)'
         router(url.pathname)
     }
 
