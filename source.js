@@ -117,33 +117,37 @@ const router = (path) => {
         // Checking isnide the router pathname if it is the same as the page we are on so we can keep the background 
         // for the relevant page the same on refresh.
 
+        
         let url = new URL('http://localhost:3000' + `${path}`);
-    if (url.pathname === '/') {
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
-    }
-    
-    if (url.pathname === '/destinationRoot') {
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
-
-    }
-
-    if (url.pathname === '/moon' || url.pathname === '/europa' || url.pathname === '/titan' || url.pathname === '/mars') {
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
-    }
-
-
-    if (url.pathname === '/crewRoot' || url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist' || url.pathname === '/crewPilot') {
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
-    }
-
-    if (url.pathname === '/technologyRoot' || url.pathname === '/spacePort' || url.pathname === '/technologyCapsule') {
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/technology/background-technology-desktop.jpg)'
-    }
+        if(intViewportWidth > '768') {
+            if (url.pathname === '/') {
+                let background = document.getElementById('root')
+                background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+            }
+            
+            if (url.pathname === '/destinationRoot') {
+                let background = document.getElementById('root')
+                background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+        
+            }
+        
+            if (url.pathname === '/moon' || url.pathname === '/europa' || url.pathname === '/titan' || url.pathname === '/mars') {
+                let background = document.getElementById('root')
+                background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+            }
+        
+        
+            if (url.pathname === '/crewRoot' || url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist' || url.pathname === '/crewPilot') {
+                let background = document.getElementById('root')
+                background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
+            }
+        
+            if (url.pathname === '/technologyRoot' || url.pathname === '/spacePort' || url.pathname === '/technologyCapsule') {
+                let background = document.getElementById('root')
+                background.style.backgroundImage = 'url(./assets/technology/background-technology-desktop.jpg)'
+            }
+        }
+   
 
     let rout = routes.find(x => x.path == path) || routes.find(x => x.path == '/not-found')
     render(layout(rout.tempalte, { navigationHandler }), document.getElementById('app'))
@@ -170,57 +174,51 @@ function navigationHandler(e) {
     history.pushState(null, null, url)
 
 
-    if (url.pathname === '/' && intViewportWidth >= '768') {
-        let url = new URL(e.target.href);
-        history.pushState(null, null, url)
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
-        router(url.pathname)
-    }
-
-    if(intViewportWidth <= '768'){
-        let url = new URL(e.target.href);
-        history.pushState(null, null, url)
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/home/background-home-tablet.jpg)'
-        router(url.pathname)
-    }
-
-    if (url.pathname === '/destinationRoot') {
-        let url = new URL(e.target.href);
-        console.log(url)
-        history.pushState(null, null, url)
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
-        router(url.pathname)
-
-    }
-
-    if (url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist' || url.pathname === '/crewPilot' || url.pathname === '/crewRoot') {
-        let url = new URL(e.target.href);
-        console.log(url)
-        history.pushState(null, null, url)
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
-        router(url.pathname)
-    }
-
-    if (url.pathname === '/mars' || url.pathname === '/europa' || url.pathname === '/titan' || url.pathname === '/moon') {
-        let url = new URL(e.target.href);
-        history.pushState(null, null, url)
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
-        router(url.pathname)
-    }
-
-
-    if (url.pathname === '/technologyRoot' || url.pathname === '/spacePort' || url.pathname === '/technologyCapsule') {
-        let url = new URL(e.target.href);
-        history.pushState(null, null, url)
-        let background = document.getElementById('root')
-        background.style.backgroundImage = 'url(./assets/technology/background-technology-desktop.jpg)'
-        router(url.pathname)
-    }
+  
+        if (url.pathname === '/') {
+            let url = new URL(e.target.href);
+            history.pushState(null, null, url)
+            let background = document.getElementById('root')
+            background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+            router(url.pathname)
+        }
+    
+    
+        if (url.pathname === '/destinationRoot') {
+            let url = new URL(e.target.href);
+            console.log(url)
+            history.pushState(null, null, url)
+            let background = document.getElementById('root')
+            background.style.backgroundImage = 'url(./assets/destination/background-destination-desktop.jpg)'
+            router(url.pathname)
+    
+        }
+    
+        if (url.pathname === '/crewEngineer' || url.pathname === '/crewSpecialist' || url.pathname === '/crewPilot' || url.pathname === '/crewRoot') {
+            let url = new URL(e.target.href);
+            console.log(url)
+            history.pushState(null, null, url)
+            let background = document.getElementById('root')
+            background.style.backgroundImage = 'url(./assets/crew/background-crew-desktop.jpg)'
+            router(url.pathname)
+        }
+    
+        if (url.pathname === '/mars' || url.pathname === '/europa' || url.pathname === '/titan' || url.pathname === '/moon') {
+            let url = new URL(e.target.href);
+            history.pushState(null, null, url)
+            let background = document.getElementById('root')
+            background.style.backgroundImage = 'url(./assets/home/background-home-desktop.jpg)'
+            router(url.pathname)
+        }
+    
+    
+        if (url.pathname === '/technologyRoot' || url.pathname === '/spacePort' || url.pathname === '/technologyCapsule') {
+            let url = new URL(e.target.href);
+            history.pushState(null, null, url)
+            let background = document.getElementById('root')
+            background.style.backgroundImage = 'url(./assets/technology/background-technology-desktop.jpg)'
+            router(url.pathname)
+        }
 
 }
 
