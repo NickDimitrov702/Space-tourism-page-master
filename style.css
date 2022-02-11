@@ -136,17 +136,16 @@ body {
     max-height: 900px;
     color: #D0D6F9;
     display: flex;
-    margin-top: 100px;
+ 
     
 }
-
-
 
 #home-page-info-content-wrapper {
     display: flex;
     align-items: center;
     margin-left: 105px;
-   imin-width: 100%;
+    min-width: 100%;
+    margin-top: 180px;
 }
 
 #home-page-info-content {
@@ -186,7 +185,7 @@ body {
 
 
 #btn-wrapper  {
-    margin-left: 300px;
+    margin-left: 200px;
     border: solid 80px transparent;
 }
 

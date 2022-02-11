@@ -1,9 +1,9 @@
 // Check why it shows invalid URL some times on e.target.href - it may be the event since it is covering 2 nested elements.(FIXED)
 // Make router for Planets navigation, it will be some kind of a nested router.(DONE, not a nested router but using the same router)
 // Seperate the destinations components like, so you can render them with the destination router.(DONE, not going to use that)
-// Continue with placing the rout paths for the other planets.
-// Create the Crew section as creating a style sheet that will apply to all the crew markups.
-// Create the technology section as the other sections. 
+// Continue with placing the rout paths for the other planets.(DONE)
+// Create the Crew section as creating a style sheet that will apply to all the crew markups.(DONE)
+// Create the technology section as the other sections.(DONE)
 // Place all the relevant components in seperate folders so it can be easy to navigate. 
 // Make the folders as fallows: Destination folder with the style.css, crew folder..., technology folder....,
 
@@ -16,24 +16,24 @@ let h1 = document.getElementsByTagName('h1')[0]
 let planetsList = document.querySelectorAll('#planets-list')
 
 
-import home from './pages/home.js'
-import layout from './pages/layout.js'
-import destionationRoot from './pages/destinationRoot.js'
+import home from './pages/MainLayouts/home.js'
+import layout from './pages/MainLayouts/layout.js'
+import destionationRoot from './pages/Destination/destinationRoot.js'
 
-import crewRoot from './pages/crewRoot.js'
+import crewRoot from './pages/Crew/crewRoot.js'
 
-import moon from './pages/destinationMoon.js'
-import mars from './pages/destinationMars.js'
-import europa from './pages/destinationEuropa.js'
-import titan from './pages/destinationTitan.js'
+import moon from './pages/Destination/destinationMoon.js'
+import mars from './pages/Destination/destinationMars.js'
+import europa from './pages/Destination/destinationEuropa.js'
+import titan from './pages/Destination/destinationTitan.js'
 
-import crewEngineer from './pages/crewEngineer.js'
-import crewSpecialist from './pages/crewSpecialist.js'
-import crewPilot from './pages/crewPilot.js'
+import crewEngineer from './pages/Crew/crewEngineer.js'
+import crewSpecialist from './pages/Crew/crewSpecialist.js'
+import crewPilot from './pages/Crew/crewPilot.js'
 
-import technologyRoot from './pages/technologyRoot.js'
-import technologySpaceport from './pages/technologySpaceport.js'
-import technologyCapsule from './pages/technologyCapsule.js'
+import technologyRoot from './pages/Technology/technologyRoot.js'
+import technologySpaceport from './pages/Technology/technologySpaceport.js'
+import technologyCapsule from './pages/Technology/technologyCapsule.js'
 
 const routes = [
     {
